@@ -3,7 +3,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 import { lighten } from 'polished'
 
 export const Container = styled.div`
-  position: absolute;
+  position: static;
 `
 export const Badge = styled.button`
   background: none;

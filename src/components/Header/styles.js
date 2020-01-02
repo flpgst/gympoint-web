@@ -25,7 +25,12 @@ export const Content = styled.div`
 
     a {
       font-weight: bold;
-      color: #ee4d64;
+      color: #444;
+      padding: 0 15px;
+
+      &:hover {
+        color: #999;
+      }
     }
   }
 
@@ -58,6 +63,7 @@ export const Profile = styled.div`
     }
   }
   img {
+    width: 32px;
     height: 32px;
     border-radius: 50%;
   }

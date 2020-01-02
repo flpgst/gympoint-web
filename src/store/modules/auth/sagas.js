@@ -7,11 +7,12 @@ import { signInSuccess, signFailure } from './actions'
 
 export function* signIn({ payload }) {
   try {
-    const { email, password } = payload
+    const { email, password, avatar } = payload
 
     const response = yield call(api.post, 'sessions', {
       email,
-      password
+      password,
+      avatar
     })
 
     const { token, user } = response.data
@@ -42,7 +43,12 @@ export function setToken({ payload }) {
   }
 }
 
+export function signOut() {
+  history.push('/')
+}
+
 export default all([
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
-  takeLatest('persist/REHYDRATE', setToken)
+  takeLatest('persist/REHYDRATE', setToken),
+  takeLatest('@auth/SIGN_OUT', signOut)
 ])
