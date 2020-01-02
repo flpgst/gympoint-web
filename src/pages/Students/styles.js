@@ -36,3 +36,5 @@ export const ProgramList = styled.table`
     }
   }
 `
+
+export const Program = styled.td``

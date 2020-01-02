@@ -38,7 +38,7 @@ export default function Edit({ match }) {
   }
   return (
     <>
-      <Title>Editar de plano</Title>
+      <Title>Editar plano</Title>
       <Buttons>
         <Link to="/planos">
           <button type="button">Voltar</button>
